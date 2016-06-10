@@ -106,6 +106,7 @@ You schedule the following shell script to run every week day at 6:00 AM to upda
 
 NOW=$(date +"%Y-%m-%d")
 
+python dynamic_ips.py
 terraform apply Desktop/Terraform/$NOW
 
 {% endhighlight %}
