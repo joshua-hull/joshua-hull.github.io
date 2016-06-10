@@ -5,9 +5,11 @@ date:   2016-06-10T09:48:12-04:00
 categories: [AWS, Python, Terraform]
 ---
 **Problem**
+
 You are given the task to only allow access to certain AWS resources to the office you work in. You create a Security Group and ask a colleague for the external IP address range assigned to the office. He tells you that there is not static range. The office, along with the rest of the building, share a commercial ISP with dynamic addresses. In addition to that, there is not one but three IPSs that are load balanced for outgoing traffic. The external IP address of the machine you're working on can theoretically change on a per request basis.
 
 **Solution**
+
 You decide there's nothing you can do about the rest of the building being able to access the resources. It isn't a security threat if they can and there no obvious way that they would be able to find the resources. You decide you'll write a Python script that gets your public IP address. It will then calculate if that address is in the list of address ranges you already know about. If the address is in the range then everything is good. If the address isn't in the range then the script will calculate a new range so you can go update the Security Group.
 
 After an hour or so you have the following script working:
@@ -32,11 +34,12 @@ print("CIDR: " + str(my_cidr))
 
 
 # The list of existing CIDR ranges
-existing = ['XXX.XXX.XXX.XXX/XX', 'XXX.XXX.XXX.XXX/XX', 'XXX.XXX.XXX.XXX/XX', 'XXX.XXX.XXX.XXX/XX', 'XXX.XXX.XXX.XXX/XX', 'XXX.XXX.XXX.XXX/XX', 'XXX.XXX.XXX.XXX/XX']
+lines = []
 ip_list = []
-for network in existing:
-    ip_list.append(IPNetwork(network))
-    pass
+with open('Desktop/AWS/IPs.txt') as infile:
+    for line in infile:
+        ip_list.append(IPNetwork(line))
+        lines.append(line)
 
 # Find the largest ranges that cover our CIDR ranges.
 ip_merged = cidr_merge(ip_list)
@@ -60,6 +63,14 @@ else:
     ip_merged = cidr_merge(ip_list)
     pass
 
+lines = []
+for network in ip_merged:
+    lines.append(str(network))
+
+with open('Desktop/AWS/IPs.txt', 'w') as outfile:
+    for line in lines:
+        outfile.write(line)
+
 pprint.pprint(ip_merged)
 
 {% endhighlight %}
@@ -67,6 +78,7 @@ pprint.pprint(ip_merged)
 Whenever someone in your office complains that they can't access the resources they need you simple have them run this script. If it states that the existing range should match then you have your colleague run the script several times spaced several minutes apart. This should allow the script to catch the new IP address the ISP is using.
 
 **Extra Credit**
+
 You decide that having to have your colleagues run this script whenever their work is interrupted is not sufficient. You want to have the script run on a schedule and update the Security Group on it's own. You append the following to the python script to facilitate the automatic updates:
 
 {% highlight python %}
@@ -79,7 +91,7 @@ ip_replace_contents = ip_replace_contents.rstrip(", ")
 
 replacements = {'IP_REPLACE_CONTENTS':ip_replace_contents}
 
-with open('Desktop\\Terraform\\Security_Groups.tf') as infile, open('Desktop\\Terraform\\' + datetime.datetime.now().strftime("%Y-%m-%d") + '\\Security_Groups.tf', 'w') as outfile:
+with open('Desktop/Terraform/Security_Groups.tf') as infile, open('Desktop/Terraform/' + datetime.datetime.now().strftime("%Y-%m-%d") + '/Security_Groups.tf', 'w') as outfile:
     for line in infile:
         for src, target in replacements.iteritems():
             line = line.replace(src, target)
@@ -94,7 +106,7 @@ You schedule the following shell script to run every week day at 6:00 AM to upda
 
 NOW=$(date +"%Y-%m-%d")
 
-terraform apply Desktop\\Terraform\\$NOW
+terraform apply Desktop/Terraform/$NOW
 
 {% endhighlight %}
 
