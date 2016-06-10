@@ -6,12 +6,16 @@ about: Software Developer in Greenville, SC
 urls:
     - text: About Me
       url: /about/
-    - text: Github
-      url: https://github.com/joshua-hull
-    - text: XML Feed
-      url: /feed.xml
     - text: "@joshua_hull"
       url: https://twitter.com/joshua_hull
+    - text: Github
+      url: https://github.com/joshua-hull
+    - text: Online Resume
+      url: /resumecard/
+    - text: LinkedIn
+      url: https://www.linkedin.com/in/joshua-hull-25551624
+    - text: XML Feed
+      url: /feed.xml
 url: "https://joshua-hull.github.io"
 baseurl: ""
 paginate: 20

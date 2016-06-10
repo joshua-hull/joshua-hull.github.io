@@ -9,4 +9,5 @@ Software Developer living in Greenville, SC. Currently doing DevOps related work
 I'm not really sure what I'll end up doing with this blog or if I'll even really use it.
 
 email: joshua.thorild.hull[at]gmail[dot]com
+
 twitter: joshua_hull
