@@ -10,6 +10,8 @@ urls:
       url: https://github.com/joshua-hull
     - text: XML Feed
       url: /feed.xml
+    - text: \@joshua_hull
+      url: https://twitter.com/joshua_hull
 url: "https://joshua-hull.github.io"
 baseurl: ""
 paginate: 20
