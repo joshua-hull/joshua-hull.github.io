@@ -3,25 +3,11 @@ layout: default
 ---
 
 <div id="home">
-    <div class="content">
-      <div class="posts">
-        <!-- <ol class="posts">
-        {% for post in paginator.posts %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a> &raquo; <i><span>{{ post.date | date_to_string }}</span></i></li>
-        {% endfor %}
-        </ol> -->
-        {% for post in paginator.posts %}
-          <section>
-            <header class="post-header">
-              <h2 class="post-title">{{ post.title }}</h2>
-              <p class="post-meta">By<a class="post-author" href="/about/"> Joshua</a>{% if page.categories %} in {% for category in page.categories %}<a class="post-category" a href="/category/{{ category }}">{{ category }}</a>{% endfor %}{% endif %}</p>
-              <div class="post-description">
-                {{ post.excerpt }}
-              </div>
-          </section>
-          {% endfor %}
-      </div>
-    </div>
+    <ol class="posts">
+    {% for post in paginator.posts %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a> &raquo; <i><span>{{ post.date | date_to_string }}</span></i></li>
+    {% endfor %}
+    </ol>
 
     <!-- Pagination links -->
     {% if paginator.total_pages > 1 %}

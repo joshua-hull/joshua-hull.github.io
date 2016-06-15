@@ -19,7 +19,7 @@
         <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Pure CSS -->
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"> -->
 
         <!-- Fonts -->
         <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -30,7 +30,7 @@
     </head>
 
     <body>
-        <!-- <div class="container">
+        <div class="container">
             <div class="col-sm-3">
                 <a href="/"><img id="about" src="/static/img/avatar.png" height="75px" width="75px" /></a>
                 <h1 class="author-name">{{ site.author }}</h1>
@@ -52,33 +52,6 @@
                 {% for i in site.urls %}
                     &raquo; <a class="about" href="{{ i.url }}">{{ i.text }}</a><br />
                 {% endfor %}
-            </div> -->
-
-            <div class="header">
-              <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-                <a class="pure-menu-heading" href="">{{ site.title }}</a>
-
-                <ul class="pure-menu-list">
-                    {% for i in site.urls %}
-                    <li class="pure-menu-item"><a href="{{ i.url }}" class="pure-menu-link">{{ i.text }}</a></li>
-                    {% endfor %}
-                </ul>
-              </div>
-            </div>
-
-            <div class="sidebar pure-u-1 pure-u-md-1-4">
-              <div class="header">
-                <h1 class="brand-title">{{ site.author }}</h1>
-                {% if site.about %}<h2 class="brand-tagline">{{ site.about}}</h2>{% endif %}
-              </div>
-              <div class="footer" style="text-align:right; margin-right:32px; box-shadow:none !impotant; ">
-                <div class="search" id="js-search">
-                  <form class="pure-form">
-                    <input type="text" placeholder="(sitemap)~$ type to search" class="search__input form-control" id="js-search__input">
-                  </form>
-                  <ul class="search__results" id="js-search__results"></ul>
-                </div>
-              </div>
             </div>
         </div><!-- end /.container -->
 
