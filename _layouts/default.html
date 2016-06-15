@@ -53,9 +53,18 @@
                     &raquo; <a class="about" href="{{ i.url }}">{{ i.text }}</a><br />
                 {% endfor %}
             </div>
+            <div class="col-sm-8 col-offset-1">
+                {{ content }}
+
+                <footer>
+                    &copy; {{ site.author }}
+                    {% if site.github %}
+                    - <a href="{{ site.github }}">{{ site.github }}</a> - Powered by Jekyll.
+                    {% endif %}
+                </footer>
+            </div><!-- end /.col-sm-8 -->
         </div><!-- end /.container -->
 
-        {{ content }}
 
         <!-- Bootstrap core JavaScript
         ================================================== -->
