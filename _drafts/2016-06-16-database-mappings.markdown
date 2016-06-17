@@ -4,9 +4,8 @@ title: Database Mappings
 date: 2016-06-16T17:58:19.000Z
 categories:
   - Database
-weather:
-  - temp: 97
-    cond: day-sunny
+weather_temp: 97
+weather_cond: day-sunny
 ---
 **Problem**
 

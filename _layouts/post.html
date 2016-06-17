@@ -2,9 +2,9 @@
 layout: default
 ---
 <h1>{{ page.title }}</h1>
-{% if page.weather %}
-<span class="wi wi-{{ page.weather.cond }} fa-lg" style="padding-bottom: 10px;color: #ADADAD;"></span>
-<span class="time" style="font-size: 17px;">  {{ page.weather.temp }} °F</span>
+{% if page.weather_temp and page.weather_cond %}
+<span class="wi wi-{{ page.weather_cond }} fa-lg" style="padding-bottom: 10px;color: #ADADAD;"></span>
+<span class="time" style="font-size: 17px;">  {{ page.weather_temp }} °F</span>
 {% endif %}
 <span class="time">{{ page.date | date_to_string }}</span>
 {% if page.categories %}
