@@ -4,8 +4,8 @@ title:  "AWS Security Groups and Dynamic IP Addresses"
 date:   2016-06-10T09:48:12-04:00
 categories: [AWS, Python, Terraform]
 weather:
-- temp: 78
-- cond: day-sunny
+  - temp: 78
+    cond: day-sunny
 ---
 **Problem**
 
