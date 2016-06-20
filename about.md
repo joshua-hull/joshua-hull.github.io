@@ -14,6 +14,7 @@ twitter: joshua_hull
 
 Want to get in contact with me directly? Fill out the form below and I'll get back to you.
 
+<hr />
 <form action="https://formspree.io/joshua.thorild.hull@gmail.com" method="POST" class="form-horizontal">
 <fieldset>
 

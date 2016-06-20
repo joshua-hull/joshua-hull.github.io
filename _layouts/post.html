@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-<h1>{% if page.icon %}<i class="fa fa-{{page.icon}}" aria-hidden="true">{% endif %}</i>{% if page.icon %} {% endif %}{{ page.title }}</h1>
+<h1>{% if page.icon %}<i class="fa fa-{{page.icon}}" aria-hidden="true">{% endif %}</i>{% if page.icon %}&nbsp;{% endif %}{{ page.title }}</h1>
 {% if page.weather_temp and page.weather_cond %}
 <span class="wi wi-{{ page.weather_cond }} fa-lg" style="padding-bottom: 10px;color: #ADADAD;"></span>
-<span class="time" style="font-size: 17px;"> {{ page.weather_temp }} °F</span>
+<span class="time" style="font-size: 17px;">&nbsp;{{ page.weather_temp }}&nbsp;°F</span>
 {% endif %}
 <span class="time">{{ page.date | date_to_string }}</span>
 {% if page.categories %}
