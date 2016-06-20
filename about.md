@@ -17,9 +17,6 @@ Want to get in contact with me directly? Fill out the form below and I'll get ba
 <form action="https://formspree.io/joshua.thorild.hull@gmail.com" method="POST" class="form-horizontal">
 <fieldset>
 
-<!-- Form Name -->
-<legend>Contact Me</legend>
-
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="name">name</label>  
