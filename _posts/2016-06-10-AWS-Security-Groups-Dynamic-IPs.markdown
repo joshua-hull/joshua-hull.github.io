@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "AWS Security Groups and Dynamic IP Addresses"
+icon: server
 date:   2016-06-10T09:48:12-04:00
 categories: [AWS, Python, Terraform]
 weather_temp: 78

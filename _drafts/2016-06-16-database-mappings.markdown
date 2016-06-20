@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Database Mappings
+icon: database
 date: 2016-06-16T17:58:19.000Z
 categories:
   - Database
