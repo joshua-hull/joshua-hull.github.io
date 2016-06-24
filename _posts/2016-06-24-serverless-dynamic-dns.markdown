@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Serverless Dynamic DNS
+title: Architecting Serverless Dynamic DNS Using AWS Services
 date: '2016-06-24 16:52'
 icon: sitemap
 categories:
@@ -32,7 +32,7 @@ wget https://....amazonaws.com/prod?mode=get
 
 The return value for the call will be the following:
 
-{% highlight json %}
+{% highlight javascript %}
 
 {
   “return_message”: “176.32.100.36”,
@@ -53,7 +53,7 @@ wget https://....amazonaws.com/prod?mode=set&hostname=host1.dyn.example.com&hash
 
 If the hostname does not need to be updated the following will be the return value:
 
-{% highlight json %}
+{% highlight javascript %}
 
 {
   “return_message”: “Your IP address matches the current Route53 DNS record.”,
@@ -64,7 +64,7 @@ If the hostname does not need to be updated the following will be the return val
 
 If the hostname is updated then the following will be the return value:
 
-{% highlight json %}
+{% highlight javascript %}
 
 {
   “return_message”: “Your hostname record host1.dyn.example.com. has been set to 176.32.100.36”,
@@ -268,7 +268,7 @@ def lambda_handler(event, context):
 
 An example of the configuration file stored in S3 is as follows:
 
-{% highlight json %}
+{% highlight javascript %}
 
 {
     "host1.dyn.example.com.": {
