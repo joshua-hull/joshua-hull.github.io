@@ -22,7 +22,7 @@ The next day at work you are trying to connect to your server again and find you
 
 **Solution**
 
-![Dynamic DNS in AWS](static/img/_posts/aws-dynamic-dns.png)
+![Dynamic DNS in AWS](/static/img/_posts/aws-dynamic-dns.png)
 
 After some research you develop a plan to use [AWS API Gateway]([https://aws.amazon.com/api-gateway/]) and [AWS Lamda](https://aws.amazon.com/lambda). You plan on having a single API endpoint with two modes, `get` and `set`. The `get` method will simply return the IP address of whoever called the API. An example of calling the endpoint in the `get` mode is as follows:
 
