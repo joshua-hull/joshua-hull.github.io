@@ -6,11 +6,11 @@ function drawMap() {
     }).addTo(map);
 
     var myStyle = {
-      fillColor: "#00c0ff",
-      color: "#00f",
+      fillColor: "#03f",
+      color: "#03f",
       weight: 1,
-      opacity: 1,
-      fillOpacity: 0.75
+      opacity: 0.5,
+      fillOpacity: 0.2
     };
 
     var greenvilleCityGeoJSON = {
