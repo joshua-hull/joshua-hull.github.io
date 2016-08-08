@@ -2,7 +2,7 @@
 layout: default
 ---
 <link href="/static/css/images.css" rel="stylesheet">
-<h1>{% if page.icon %}<i class="fa fa-{{page.icon}}" aria-hidden="true">{% endif %}</i>{% if page.icon %}&nbsp;{% endif %}{{ page.title }}</h1>
+<h3>{% if page.icon %}<i class="fa fa-{{page.icon}}" aria-hidden="true">{% endif %}</i>{% if page.icon %}&nbsp;{% endif %}{{ page.title }}</h3>
 {% if page.weather_temp and page.weather_cond %}
 <span class="wi wi-{{ page.weather_cond }} fa-lg" style="padding-bottom: 10px;color: #ADADAD;"></span>
 <span class="time" style="font-size: 17px;">&nbsp;{{ page.weather_temp }}&nbsp;°F</span>
