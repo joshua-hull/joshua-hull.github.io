@@ -47,7 +47,7 @@ layout: default
                 <li class="relatedPost">
                     <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
                     {% if post.categories %}
-                        &nbsp;&nbsp;{% for category in post.categories %}<a class="label label-default" href="/category/{{ category }}">{{ category }}</a>{% endfor %}
+                        &nbsp;&nbsp;{% for category in post.categories %}<a class="label label-default" href="/category/{{ category }}">{{ category }}</a>&nbsp;{% endfor %}
                     {% endif %}
                 </li>
                 {% capture hasSimilar %}{{ hasSimilar }}*{% endcapture %}
