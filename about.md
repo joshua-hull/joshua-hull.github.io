@@ -12,7 +12,7 @@ email: joshua.thorild.hull[at]gmail[dot]com
 
 twitter: joshua_hull
 
-GPG Fingerprint: [D17B F677 3C38 000A 1035 56BF C0EE 1646 3884 F344](static/3884F344.pub)
+GPG Fingerprint: [D17B F677 3C38 000A 1035 56BF C0EE 1646 3884 F344](/static/3884F344.asc)
 
 Want to get in contact with me directly? Fill out the form below and I'll get back to you.
 
