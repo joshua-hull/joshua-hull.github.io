@@ -12,8 +12,9 @@ I'm not really sure what I'll end up doing with this blog or if I'll even really
     <ul class="nav nav-pills nav-pills-info" role="tablist">
         <li class="active">
             <a href="https://twitter.com/joshua_hull" role="tab" data-toggle="tab">
-                <i class="fa fa-twitter"></i></a>
+                <i class="fa fa-twitter"></i>
                 twitter
+            </a>
         </li>
         <li class="active">
             <a href="https://github.com/joshua-hull" role="tab" data-toggle="tab">
