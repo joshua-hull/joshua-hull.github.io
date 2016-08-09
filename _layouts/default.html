@@ -118,8 +118,8 @@
                     &raquo; <a class="about" href="{{ i.url }}">{{ i.text }}</a><br />
                 {% endfor %}
             </div> -->
-            <div class = "col-sm-8">
-              <div class = "card">
+            <div class = "col-sm-8 card">
+
                   {{ content }}
 
                   <footer>
@@ -129,32 +129,6 @@
                       {% endif %}
                   </footer>
                 </div><!-- end /.col-sm-8 -->
-            </div>
-            <div class = "col-sm-8">
-                <div class = "card">
-                    <h5>Social Links</h5>
-                    <ul>
-                      <li>Twitter</li>
-                      <li>GitHub</li>
-                      <li>LinkedIn</li>
-                      <li>Email</li>
-                      <li>Resume</li>
-                      <li>GPG Key</li>
-                    </ul>
-                </div>
-                <div class="card">
-                  <ul>
-                    {% for category in site.categories %}
-                        {% capture category_slug %}{{ category | first }}{% endcapture %}
-                        {% for c_slug in category_slug %}
-                        <li>
-                            <a href="/category/{{ c_slug }}">{{ c_slug }}</a>
-                        </li>
-                        {% endfor %}
-                    {% endfor %}
-                  </ul>
-                </div>
-            </div>
         </div><!-- end /.container -->
 
 
