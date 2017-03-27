@@ -43,7 +43,7 @@
         
         <!-- OpenGraph -->
         <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-        <meta property="og:description" content="{{ page.excerpt | remove: '<p>' | remove: '</p>' }}"/>
+        <meta property="og:description" content="{{ page.excerpt | strip_html }}"/>
         <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}" />
         <meta property="og:image" content="https://raw.githubusercontent.com/joshua-hull/joshua-hull.github.io/master/static/img/background.jpg" />
     </head>
