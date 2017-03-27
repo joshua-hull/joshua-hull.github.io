@@ -44,7 +44,7 @@
         <!-- OpenGraph -->
         <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
         <meta property="og:description" content="{% if post.excerpt %}{{ post.excerpt | remove: '<p>' | remove: '</p>' }}{% else %}{{ site.description }}{% endif %}"/>
-        <meta property="og:url" content="{{ site.baseurl }}{% if page.path %}{% link page.path %}{% endif %}" />
+        <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}" />
 <!--         <meta property="og:image" content="http://example.com/foo.jpg" /> -->
     </head>
 
