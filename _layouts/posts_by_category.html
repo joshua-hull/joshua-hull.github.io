@@ -4,20 +4,11 @@ layout: default
 
 <header id="post-header">
     <h3 id="post-subtitle">Articles By Category: {{ page.categories }}</h3>
+    {% if page.desc %}<p>{{ page.desc }}</p>{% endif %}
 </header>
 
 <div id="post-content">
-    <hr />
-    {% for category in site.categories %}
-        {% capture category_slug %}{{ category | first }}{% endcapture %}
-        {% for c_slug in category_slug %}
-            {% if c_slug == page.categories %}
-                <button class="btn btn-sm btn-default active">{{ c_slug }}</button>
-            {% else %}
-                <a href="/category/{{ c_slug }}" class="btn btn-sm btn-default">{{ c_slug }}</a>
-            {% endif %}
-        {% endfor %}
-    {% endfor %}
+  
     <hr />
 
     {% if site.categories[page.categories] %}
@@ -44,6 +35,20 @@ layout: default
             {% endif %}
         {% endfor %}
     {% else %}
-        <p>There are no posts in this categories.</p>
+        <p>There are no posts in this catagory yet.</p>
     {% endif %}
+
+    <hr />
+
+    {% for category in site.categories %}
+        {% capture category_slug %}{{ category | first }}{% endcapture %}
+        {% for c_slug in category_slug %}
+            {% if c_slug == page.categories %}
+                <button class="btn btn-sm btn-default active">{{ c_slug }}</button>
+            {% else %}
+                <a href="/category/{{ c_slug }}" class="btn btn-sm btn-default">{{ c_slug }}</a>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
 </div>
