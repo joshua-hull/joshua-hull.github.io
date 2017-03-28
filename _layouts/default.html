@@ -49,7 +49,7 @@
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:description" content="{{ page.excerpt | strip_html }}"/>
+        <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}"/>
         <meta name="twitter:site" content="@joshua_hull" />
         <meta name="twitter:creator" content="@joshua_hull" />
     </head>
