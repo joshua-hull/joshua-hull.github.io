@@ -90,7 +90,7 @@ If you've got questions about Amazon Web Services<sup>[4](#footnote4)</sup> or c
 
 ### Footnotes
 
-* <a name="footnote1">1</a>:https://boto3.readthedocs.io/en/latest/
-* <a name="footnote2">2</a>:https://bl.ocks.org/mbostock/4062045
-* <a name="footnote3">3</a>:https://d3js.org/
-* <a name="footnote4">4</a>:https://aws.amazon.com/
+* <a name="footnote1">1</a>:(https://boto3.readthedocs.io/en/latest/)
+* <a name="footnote2">2</a>:(https://bl.ocks.org/mbostock/4062045)
+* <a name="footnote3">3</a>:(https://d3js.org/)
+* <a name="footnote4">4</a>:(https://aws.amazon.com/)
