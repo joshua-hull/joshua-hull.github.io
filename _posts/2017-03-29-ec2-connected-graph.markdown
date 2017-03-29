@@ -88,7 +88,7 @@ Overall I'm happy with the exercise. While the visualization aspect didn't turn 
 
 If you've got questions about Amazon Web Services<sup>[4](#footnote4)</sup> or cloud technology in general feel free to contact me and I'll see how I can help bring my experience to the problem.
 
-<a name="footnote1">1</a>:https://boto3.readthedocs.io/en/latest/
-<a name="footnote2">2</a>:https://bl.ocks.org/mbostock/4062045
-<a name="footnote3">3</a>:https://d3js.org/
-<a name="footnote4">4</a>:https://aws.amazon.com/
+* <a name="footnote1">1</a>:https://boto3.readthedocs.io/en/latest/
+* <a name="footnote2">2</a>:https://bl.ocks.org/mbostock/4062045
+* <a name="footnote3">3</a>:https://d3js.org/
+* <a name="footnote4">4</a>:https://aws.amazon.com/
