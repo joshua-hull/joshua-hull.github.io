@@ -44,7 +44,7 @@
         <!-- OpenGraph -->
         <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
         <meta property="og:description" content="{% if page.except %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}"/>
-        <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}" />
+        <meta property="og:url" content="{{ site.url}}{{ site.baseurl }}{{ page.url }}" />
         <meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}https://raw.githubusercontent.com/joshua-hull/joshua-hull.github.io/master/static/img/background.jpg{% endif %}" />
 
         <!-- Twitter Card -->
