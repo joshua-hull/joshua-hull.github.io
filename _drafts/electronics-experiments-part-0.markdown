@@ -2,9 +2,9 @@
 layout: post
 title: "Electronics Experiments: Part 0"
 date:
-icon: cloud
+icon: microchip
 categories:
-  - OpenStack
+  - Electronics
 weather_temp:
 weather_cond:
 ---
