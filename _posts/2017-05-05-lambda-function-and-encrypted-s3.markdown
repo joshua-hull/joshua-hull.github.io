@@ -5,6 +5,7 @@ date: 2017-05-05T14:09:22-04:00
 icon: cloud
 categories:
   - AWS
+  - Python
 weather_temp: 60
 weather_cond: day-cloudy
 ---
