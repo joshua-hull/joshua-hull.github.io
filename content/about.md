@@ -1,13 +1,13 @@
 +++
 title = "About"
 description = "About Me"
-date = "2025-04-08"
+date = "2026-06-25"
 aliases = ["about-me"]
 author = "Joshua Hull"
 +++
 
-Hi, I’m Joshua. I'm a seasoned software engineer with over ten years of experience building robust and scalable solutions. My software journey began at Clemson University, where I earned a Bachelor’s degree in Computer Science. I've lived in the Upstate of South Carolina since my high school days.
+Hi, I’m Joshua — a software engineer with over ten years of experience building and shipping software products. I studied Computer Science at Clemson University and have called the Upstate of South Carolina home since high school.
 
-Professionally, I'm a full stack engineer developing mostly in C# and Blazor. I also have a solid professional foundation in Java, React, and Python. When time allows I work in DevOps roles and have experience in both AWS and Azure. I also have experience in Kubernetes via my homelab work.
+My day-to-day work spans the full software development stack — from designing the behind-the-scenes systems and databases that power an application, to building the interfaces that users interact with directly. I primarily work with C#, Blazor, Java, React, and Python. I also have experience in cloud infrastructure and deployment, working with platforms like Amazon Web Services and Microsoft Azure, along with container orchestration through my homelab.
 
-When I'm not in front of a computer I enjoy photography, flying my drone, and spending time with my family.
+Outside of work, I enjoy photography, flying my drone, and spending time with my family.
