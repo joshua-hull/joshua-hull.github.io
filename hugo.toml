@@ -4,6 +4,7 @@ theme = "hugo-coder"
 languageCode = "en"
 defaultContentLanguage = "en"
 enableEmoji = true
+enableRobotsTXT = true
 
 [pagination]
 pagerSize = 6
