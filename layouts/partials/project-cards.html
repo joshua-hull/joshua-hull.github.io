@@ -1,0 +1,25 @@
+{{- /*
+  Project cards using the design system's signature tint treatment: a 14% fill
+  of the entity colour mixed against the card surface, plus a 3px spine in that
+  colour. Each project owns a --series-* slot, assigned by frontmatter `series`
+  or falling back to its position.
+*/ -}}
+<ul class="project-cards">
+  {{- range $i, $p := .pages }}
+    {{- $slot := $p.Params.seriesColor | default (add (mod $i 6) 1) -}}
+    <li class="project-card jh-tint" style="--entity-color: var(--series-{{ $slot }});">
+      <h3 class="project-name">
+        <a href="{{ $p.Params.externalLink | default $p.RelPermalink }}"
+           {{- with $p.Params.externalLink }} rel="noopener" target="_blank"{{ end }}>{{ $p.Title }}</a>
+      </h3>
+      {{- with $p.Description }}
+        <p class="project-desc">{{ . }}</p>
+      {{- end }}
+      {{- with $p.Params.techStack }}
+        <ul class="chips">
+          {{- range . }}<li class="chip">{{ . }}</li>{{ end }}
+        </ul>
+      {{- end }}
+    </li>
+  {{- end }}
+</ul>

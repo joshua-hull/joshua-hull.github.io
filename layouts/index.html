@@ -1,0 +1,44 @@
+{{ define "main" }}
+  <section class="hero">
+    <div class="wrap wrap-lg">
+      <p class="eyebrow">{{ delimit .Site.Params.info " · " }}</p>
+      <h1 class="hero-title">{{ .Site.Params.author }}</h1>
+
+      {{ with .Content }}
+        <div class="hero-lede">{{ . }}</div>
+      {{ end }}
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ "projects/" | relURL }}">
+          See what I've built {{ partial "icon.html" (dict "name" "arrow-right" "size" 17) }}
+        </a>
+        <a class="btn btn-outline" href="{{ "about/" | relURL }}">About me</a>
+      </div>
+
+      <ul class="social-list">
+        {{- range sort .Site.Params.social "weight" }}
+          <li>
+            <a href="{{ .url }}" rel="me noopener" target="_blank" aria-label="{{ .name }}" title="{{ .name }}">
+              {{- partial "icon.html" (dict "name" .icon "size" 20) -}}
+            </a>
+          </li>
+        {{- end }}
+      </ul>
+    </div>
+  </section>
+
+  {{- $projects := where .Site.RegularPages "Section" "projects" -}}
+  {{- with $projects }}
+    <section class="home-section">
+      <div class="wrap wrap-lg">
+        <div class="section-head">
+          <h2 class="section-title">Selected work</h2>
+          <a class="section-link" href="{{ "projects/" | relURL }}">
+            All projects {{ partial "icon.html" (dict "name" "arrow-right" "size" 16) }}
+          </a>
+        </div>
+        {{ partial "project-cards.html" (dict "pages" (.ByDate.Reverse | first 2)) }}
+      </div>
+    </section>
+  {{- end }}
+{{ end }}

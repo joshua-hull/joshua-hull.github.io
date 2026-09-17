@@ -1,0 +1,52 @@
+{{- $title := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) -}}
+{{- $desc := .Description | default .Summary | default .Site.Params.description -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>{{ $title }}</title>
+
+<meta name="author" content="{{ .Site.Params.author }}">
+<meta name="description" content="{{ $desc }}">
+<meta name="keywords" content="{{ .Site.Params.keywords }}">
+
+{{/* Hugo's internal templates read the site `images` param for the social card. */}}
+{{- template "_internal/opengraph.html" . -}}
+{{- template "_internal/twitter_cards.html" . -}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* Set the theme before first paint so a stored preference never flashes. */}}
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "light" || t === "dark") {
+        document.documentElement.setAttribute("data-theme", t);
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
+
+{{- $jh := resources.Get "css/jh.css" -}}
+{{- $site := resources.Get "css/site.css" -}}
+{{- $css := slice $jh $site | resources.Concat "css/site.bundle.css" -}}
+{{- if hugo.IsProduction -}}
+  {{- $css = $css | minify | fingerprint -}}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+{{- else -}}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{- end -}}
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="{{ .Site.Params.mask_icon_color }}">
+
+{{ with .OutputFormats.Get "rss" -}}
+  <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
+{{- end }}

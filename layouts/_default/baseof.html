@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>{{ partial "head.html" . }}</head>
+<body>
+  {{ partial "nav.html" . }}
+  <main id="main">{{ block "main" . }}{{ end }}</main>
+  {{ partial "footer.html" . }}
+  {{- $js := resources.Get "js/theme.js" -}}
+  {{- if hugo.IsProduction -}}
+    {{- $js = $js | minify | fingerprint -}}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+  {{- else -}}
+    <script src="{{ $js.RelPermalink }}" defer></script>
+  {{- end -}}
+</body>
+</html>

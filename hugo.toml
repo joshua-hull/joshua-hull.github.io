@@ -1,6 +1,5 @@
 baseURL = "https://joshua-hull.is-a.dev"
 title = "Joshua Hull"
-theme = "hugo-coder"
 languageCode = "en"
 defaultContentLanguage = "en"
 enableEmoji = true
@@ -12,8 +11,9 @@ disableKinds = ["taxonomy", "term"]
 
 # Hugo warns (it does not fail) when the running binary does not satisfy this,
 # which is enough to catch a mismatch locally. The actual pin lives in
-# .tool-versions, which CI and the devcontainer both read. `extended` matters
-# because the theme compiles SCSS through toCSS.
+# .tool-versions, which CI and the devcontainer both read. `extended` is kept
+# because that is what CI installs, though nothing needs it now that the site
+# ships plain CSS rather than the old theme's SCSS.
 [module]
   [module.hugoVersion]
     min = "0.145.0"
@@ -50,10 +50,6 @@ colorScheme = "auto"
 hideColorSchemeToggle = false
 # Series see also post count
 maxSeeAlsoItems = 5
-# Custom CSS
-customCSS = ["css/custom.css", "css/projects.css"]
-# Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
-customSCSS = []
 
 # Safari pinned-tab icon tint (theme default is #5bbad5)
 mask_icon_color = "#246EB9"
@@ -154,21 +150,21 @@ tag = "tags"
 author = "authors"
 
 [[params.social]]
-name = "Github"
-icon = "fa-brands fa-github fa-2x"
+name = "GitHub"
+icon = "github"
 weight = 1
 url = "https://github.com/joshua-hull/"
 
 [[params.social]]
-name = "Twitter"
-icon = "fa-brands fa-x-twitter fa-2x"
-weight = 3
+name = "X"
+icon = "x"
+weight = 2
 url = "https://x.com/joshua_hull/"
 
 [[params.social]]
 name = "LinkedIn"
-icon = "fa-brands fa-linkedin fa-2x"
-weight = 4
+icon = "linkedin"
+weight = 3
 url = "https://www.linkedin.com/in/joshua-hull-25551624/"
 
 [languages.en]

@@ -1,0 +1,22 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap wrap-lg header-inner">
+    <a class="brand" href="{{ "/" | relURL }}">
+      <img class="brand-mark" src="/images/favicon.svg" width="28" height="28" alt="">
+      <span class="brand-name">{{ .Site.Title }}</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Main">
+      {{- $cur := .RelPermalink -}}
+      {{- range .Site.Menus.main }}
+        {{- $url := .URL | relURL -}}
+        <a href="{{ $url }}"{{ if or (eq $cur $url) (and (ne $url "/") (hasPrefix $cur $url)) }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{- end }}
+      <button type="button" class="theme-toggle" data-theme-toggle
+              aria-label="Switch colour theme" title="Switch colour theme">
+        <span class="theme-icon theme-icon-light">{{ partial "icon.html" (dict "name" "sun" "size" 17) }}</span>
+        <span class="theme-icon theme-icon-dark">{{ partial "icon.html" (dict "name" "moon" "size" 17) }}</span>
+      </button>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <article class="page">
+    <div class="wrap wrap-md">
+      <header class="page-head">
+        <p class="eyebrow">Error 404</p>
+        <h1 class="page-title">This page doesn't exist</h1>
+        <p class="page-lede">The link may be out of date, or the page may have moved.</p>
+      </header>
+      <a class="btn btn-primary" href="{{ "/" | relURL }}">
+        {{ partial "icon.html" (dict "name" "arrow-left" "size" 17) }} Back home
+      </a>
+    </div>
+  </article>
+{{ end }}
