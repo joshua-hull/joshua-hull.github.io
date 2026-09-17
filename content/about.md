@@ -4,6 +4,7 @@ description = "About Me"
 date = "2026-06-25"
 aliases = ["about-me"]
 author = "Joshua Hull"
+layout = "about"
 +++
 
 Hi, I’m Joshua — a software engineer with over ten years of experience building and shipping software products. I studied Computer Science at Clemson University and have called the Upstate of South Carolina home since high school.

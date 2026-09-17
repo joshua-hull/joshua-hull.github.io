@@ -386,3 +386,78 @@ main { flex: 1; }
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   .project-card:hover { transform: none; }
 }
+
+/* ---------- resume sections (education, skills) ---------- */
+.resume-section { margin-top: var(--space-8); }
+.resume-section .section-title {
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.entries {
+  margin: var(--space-5) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.entry + .entry {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-subtle);
+}
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+}
+.entry-title {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+.entry-dates {
+  font-size: var(--text-2xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.entry-meta {
+  margin: var(--space-1) 0 0;
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+/* Skills: a tracked micro-label against its chips, per the system's table rule. */
+.skills { margin: var(--space-5) 0 0; }
+.skill-row {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: var(--space-4);
+  align-items: start;
+  padding-block: var(--space-3);
+}
+.skill-row + .skill-row { border-top: 1px solid var(--border-subtle); }
+.skill-label {
+  margin: 0;
+  padding-top: 0.35rem;
+  font-size: 0.625rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.skill-items { margin: 0; }
+.skill-items .chips { margin: 0; }
+
+@media (max-width: 720px) {
+  .skill-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+  .skill-label { padding-top: 0; }
+}
+
+/* The header is sticky, so anchor targets must clear it or they land underneath. */
+[id] { scroll-margin-top: calc(64px + var(--space-5)); }
