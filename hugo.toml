@@ -37,6 +37,9 @@ customCSS = []
 # Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
 customSCSS = []
 
+# Safari pinned-tab icon tint (theme default is #5bbad5)
+mask_icon_color = "#246EB9"
+
 # Custom JS
 customJS = []
 
