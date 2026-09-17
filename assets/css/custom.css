@@ -1,0 +1,14 @@
+/* Site-wide overrides on top of hugo-coder. */
+
+/* The theme justifies article paragraphs and enables automatic hyphenation:
+     .content article p { text-align: justify; hyphens: auto }
+   At this measure that opens whitespace rivers between words and breaks words
+   across lines ("fami-ly"). Ragged-right reads better and never hyphenates.
+   The extra `body` outweighs the theme's selector regardless of load order. */
+body .content article p {
+  text-align: left;
+  text-justify: auto;
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
+}
