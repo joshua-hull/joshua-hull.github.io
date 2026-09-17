@@ -6,6 +6,9 @@
 	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 	"features": {
 		"ghcr.io/devcontainers/features/hugo:1": {
+			// Devcontainer features cannot read .tool-versions, so this is the
+			// one copy that has to be kept in sync with it by hand.
+			"version": "0.145.0",
 			"extended": true
 		}
 	},
