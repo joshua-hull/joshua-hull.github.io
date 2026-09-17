@@ -6,6 +6,10 @@ defaultContentLanguage = "en"
 enableEmoji = true
 enableRobotsTXT = true
 
+# No posts yet, so every taxonomy page renders empty. Delete this line to
+# bring /tags/, /categories/, /series/ and /authors/ back when there are.
+disableKinds = ["taxonomy", "term"]
+
 [pagination]
 pagerSize = 6
 
