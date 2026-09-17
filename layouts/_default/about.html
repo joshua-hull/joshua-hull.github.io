@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <article class="page">
+    <div class="wrap wrap-md">
+      <header class="page-head">
+        <h1 class="page-title">{{ .Title }}</h1>
+      </header>
+      <div class="prose">{{ .Content }}</div>
+      {{ partial "resume.html" . }}
+    </div>
+  </article>
+{{ end }}

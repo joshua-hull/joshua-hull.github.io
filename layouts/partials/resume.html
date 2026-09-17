@@ -1,0 +1,36 @@
+{{- $r := .Site.Data.resume -}}
+
+{{- with $r.education }}
+  <section class="resume-section" id="education">
+    <h2 class="section-title">Education</h2>
+    <ul class="entries">
+      {{- range . }}
+        <li class="entry">
+          <div class="entry-head">
+            <h3 class="entry-title">{{ .credential }}</h3>
+            <span class="entry-dates">{{ .dates }}</span>
+          </div>
+          <p class="entry-meta">{{ .institution }} · {{ .location }}</p>
+        </li>
+      {{- end }}
+    </ul>
+  </section>
+{{- end }}
+
+{{- with $r.skills }}
+  <section class="resume-section" id="skills">
+    <h2 class="section-title">Tools of the trade</h2>
+    <dl class="skills">
+      {{- range . }}
+        <div class="skill-row">
+          <dt class="skill-label">{{ .label }}</dt>
+          <dd class="skill-items">
+            <ul class="chips">
+              {{- range .items }}<li class="chip">{{ . }}</li>{{ end }}
+            </ul>
+          </dd>
+        </div>
+      {{- end }}
+    </dl>
+  </section>
+{{- end }}

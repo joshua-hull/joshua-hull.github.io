@@ -1,0 +1,27 @@
+# Education and skills, rendered by layouts/partials/resume.html on the About
+# page. Sourced from the LaTeX resume.
+#
+# Deliberately absent: employers, work history, and contact details. Anyone who
+# wants the career history can use the LinkedIn link in the header and footer,
+# or get in touch. This file is published, so nothing goes in it that should not
+# be public.
+
+education:
+  - institution: Clemson University
+    location: Clemson, SC
+    credential: B.S. Computer Science
+    dates: December 2014
+
+skills:
+  - label: Languages
+    items: [C#, Java, JavaScript, Python, SQL]
+  - label: Frameworks
+    items: [Blazor, .NET, React, Redux, Spring Boot, Node.js]
+  - label: Cloud & infrastructure
+    items: [Azure, AKS, Azure Key Vault, Bicep, AWS, Docker, Linux]
+  - label: Integration
+    items: [MuleSoft, Apache Camel, HL7/Rhapsody, Salesforce Apex, REST APIs]
+  - label: Data
+    items: [PostgreSQL, MySQL, Redshift]
+  - label: Practices
+    items: [Agile/Scrum, Regression testing, Change management]
