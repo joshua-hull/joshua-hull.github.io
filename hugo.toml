@@ -13,6 +13,10 @@ author = "Joshua Hull"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
 description = "Joshua Hull's Personal Website"
 keywords = "blog,developer,personal"
+# Social preview card (1200x630). Hugo's internal opengraph/twitter_cards
+# templates fall back to this when a page sets no image of its own.
+# Regenerate from tools/og-card.html -- see the comment in that file.
+images = ["images/og-image.png"]
 info = ["Software Engineer"]
 # avatarURL = "images/avatar.jpg"
 # gravatar = "john.doe@example.com"

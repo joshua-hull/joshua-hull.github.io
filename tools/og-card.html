@@ -1,0 +1,47 @@
+<!--
+  Source for static/images/og-image.png (the 1200x630 social preview card).
+
+  To regenerate:
+    1. cp static/images/favicon.svg tools/   (the card references it alongside)
+    2. Serve this directory:  python3 -m http.server 8901
+    3. Open it in a browser sized to a 1200x734 viewport -- the extra 104px is
+       window chrome, which leaves the card occupying exactly 1200x630.
+    4. Screenshot (2x displays give 2400x1260), then:
+         sips -z 630 1200 shot.png --out static/images/og-image.png
+    5. Delete the favicon.svg copy from tools/.
+
+  The card is pinned top-left at a fixed 1200x630 so the capture needs no
+  cropping -- sips center-crops and would clip the blue spine.
+-->
+<!doctype html><html><head><meta charset=utf-8>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#444;}
+  /* Exactly 1200x630, pinned top-left so the capture can be cropped precisely. */
+  .card{
+    position:absolute;top:0;left:0;width:1200px;height:630px;overflow:hidden;
+    background:#1b1d1f;
+    font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:#f2f4f6;
+    display:flex;flex-direction:column;justify-content:center;
+    padding:0 96px;
+  }
+  .card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:14px;background:#246EB9}
+  .card:after{content:"";position:absolute;right:-180px;bottom:-240px;width:620px;height:620px;border-radius:50%;
+    background:radial-gradient(circle,rgba(36,110,185,.30) 0%,rgba(36,110,185,0) 68%)}
+  .mark{width:96px;height:96px;border-radius:21px;display:block;margin-bottom:46px}
+  h1{font-size:104px;line-height:1.02;font-weight:600;letter-spacing:-.025em}
+  h2{font-size:44px;font-weight:500;color:#aeb6bf;margin-top:20px;letter-spacing:-.01em}
+  .url{margin-top:58px;font-size:28px;font-weight:600;color:#5a9de0;position:relative;z-index:1}
+</style></head>
+<body>
+  <div class=card>
+    <img class=mark src="favicon.svg" alt="">
+    <h1>Joshua Hull</h1>
+    <h2>Software Engineer</h2>
+    <div class=url>joshua-hull.is-a.dev</div>
+  </div>
+</body></html>
