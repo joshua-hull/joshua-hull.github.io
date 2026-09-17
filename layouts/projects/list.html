@@ -1,0 +1,38 @@
+{{ define "title" }}
+  {{- .Title }} · {{ .Site.Title -}}
+{{ end }}
+{{ define "content" }}
+  <section class="container list projects">
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="{{ .Permalink | safeURL }}">{{ .Title }}</a>
+      </h1>
+    </header>
+
+    {{ .Content }}
+
+    <ul class="project-list">
+      {{ range .Pages.ByDate.Reverse }}
+        <li class="project-card">
+          <h2 class="project-title">
+            <a
+              href="{{ .Params.externalLink | default .RelPermalink }}"
+              {{- with .Params.externalLink }} class="external-link" rel="noopener noreferrer"{{ end }}>
+              {{- .Title -}}
+            </a>
+          </h2>
+
+          {{ with .Description }}
+            <p class="project-description">{{ . }}</p>
+          {{ end }}
+
+          {{ with .Params.techStack }}
+            <ul class="project-stack">
+              {{ range . }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
