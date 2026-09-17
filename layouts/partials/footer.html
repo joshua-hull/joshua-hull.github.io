@@ -1,0 +1,17 @@
+<footer class="site-footer">
+  <div class="wrap wrap-lg footer-inner">
+    <p class="footer-copy">
+      © {{ .Site.Params.since }}{{ if ne (string .Site.Params.since) (string now.Year) }}–{{ now.Year }}{{ end }}
+      {{ .Site.Params.author }}
+    </p>
+    <ul class="social-list social-list-sm">
+      {{- range sort .Site.Params.social "weight" }}
+        <li>
+          <a href="{{ .url }}" rel="me noopener" target="_blank" aria-label="{{ .name }}" title="{{ .name }}">
+            {{- partial "icon.html" (dict "name" .icon "size" 18) -}}
+          </a>
+        </li>
+      {{- end }}
+    </ul>
+  </div>
+</footer>

@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <article class="page">
+    <div class="wrap wrap-md">
+      <header class="page-head">
+        {{- if eq .Section "projects" }}
+          <a class="back-link" href="{{ "projects/" | relURL }}">
+            {{ partial "icon.html" (dict "name" "arrow-left" "size" 16) }} Projects
+          </a>
+        {{- end }}
+        <h1 class="page-title">{{ .Title }}</h1>
+        {{- with .Description }}<p class="page-lede">{{ . }}</p>{{ end }}
+        {{- with .Params.techStack }}
+          <ul class="chips">
+            {{- range . }}<li class="chip">{{ . }}</li>{{ end }}
+          </ul>
+        {{- end }}
+      </header>
+      <div class="prose">{{ .Content }}</div>
+    </div>
+  </article>
+{{ end }}
