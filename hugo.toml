@@ -10,6 +10,15 @@ enableRobotsTXT = true
 # bring /tags/, /categories/, /series/ and /authors/ back when there are.
 disableKinds = ["taxonomy", "term"]
 
+# Hugo warns (it does not fail) when the running binary does not satisfy this,
+# which is enough to catch a mismatch locally. The actual pin lives in
+# .tool-versions, which CI and the devcontainer both read. `extended` matters
+# because the theme compiles SCSS through toCSS.
+[module]
+  [module.hugoVersion]
+    min = "0.145.0"
+    extended = true
+
 [pagination]
 pagerSize = 6
 
