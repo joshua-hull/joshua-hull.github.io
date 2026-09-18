@@ -32,5 +32,5 @@ and re-allocation then routes around the locked block instead of overwriting it.
 
 Built with the App Router on a local SQLite file via Prisma's `better-sqlite3` driver
 adapter — no auth, no server, no account. It runs on my machine and nowhere else.
-Later work migrated the whole interface onto shadcn/ui, which is where the design
-system I now reuse elsewhere came from.
+Later work migrated the whole interface onto shadcn/ui, and the visual language
+that came out of it is the same one this site is built on.

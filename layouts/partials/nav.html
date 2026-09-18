@@ -13,7 +13,7 @@
         <a href="{{ $url }}"{{ if or (eq $cur $url) (and (ne $url "/") (hasPrefix $cur $url)) }} aria-current="page"{{ end }}>{{ .Name }}</a>
       {{- end }}
       <button type="button" class="theme-toggle" data-theme-toggle
-              aria-label="Switch colour theme" title="Switch colour theme">
+              aria-label="Switch color theme" title="Switch color theme">
         <span class="theme-icon theme-icon-light">{{ partial "icon.html" (dict "name" "sun" "size" 17) }}</span>
         <span class="theme-icon theme-icon-dark">{{ partial "icon.html" (dict "name" "moon" "size" 17) }}</span>
       </button>
