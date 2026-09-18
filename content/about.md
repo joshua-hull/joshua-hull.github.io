@@ -15,5 +15,5 @@ as much as the interface someone actually clicks. A lot of it is internal
 tooling, the cloud infrastructure it runs on, and getting systems that were
 never designed to talk to each other to do exactly that.
 
-Away from the keyboard I'm usually behind a camera, flying a drone, or spending
-time with my family.
+Away from the keyboard I'm usually behind a camera or spending time with my
+family.
