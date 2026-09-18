@@ -4,9 +4,11 @@ languageCode = "en"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 
-# No posts yet, so every taxonomy page renders empty. Delete this line to
-# bring /tags/, /categories/, /series/ and /authors/ back when there are.
-disableKinds = ["taxonomy", "term"]
+# taxonomy/term: no posts yet, so every taxonomy page renders empty. Remove
+#   those two to bring /tags/, /categories/, /series/ and /authors/ back.
+# RSS: there is nothing to subscribe to. The feed listed the About page
+#   alongside the projects, which is not a thing anyone wants delivered.
+disableKinds = ["taxonomy", "term", "RSS"]
 
 # Hugo warns (it does not fail) when the running binary does not satisfy this,
 # which is enough to catch a mismatch locally. The actual pin lives in

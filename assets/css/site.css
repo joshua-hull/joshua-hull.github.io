@@ -96,7 +96,10 @@ main { flex: 1; }
 .site-nav a:hover { color: var(--text-primary); background: var(--surface-subtle); }
 .site-nav a[aria-current="page"] { color: var(--color-primary); font-weight: var(--weight-semibold); }
 
-.theme-toggle {
+/* Inert without JS, so it is not shown at all until the head script marks
+   the document. That script runs before first paint, so this never flashes. */
+.theme-toggle { display: none; }
+.js .theme-toggle {
   display: inline-grid;
   place-items: center;
   width: 34px;
