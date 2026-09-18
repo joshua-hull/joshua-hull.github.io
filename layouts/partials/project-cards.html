@@ -4,14 +4,15 @@
   color. Each project owns a --series-* slot, assigned by frontmatter `series`
   or falling back to its position.
 */ -}}
+{{- $h := .level | default 3 -}}
 <ul class="project-cards">
   {{- range $i, $p := .pages }}
     {{- $slot := $p.Params.seriesColor | default (add (mod $i 6) 1) -}}
     <li class="project-card jh-tint" style="--entity-color: var(--series-{{ $slot }});">
-      <h3 class="project-name">
+      <h{{ $h }} class="project-name">
         <a href="{{ $p.Params.externalLink | default $p.RelPermalink }}"
            {{- with $p.Params.externalLink }} rel="noopener" target="_blank"{{ end }}>{{ $p.Title }}</a>
-      </h3>
+      </h{{ $h }}>
       {{- with $p.Description }}
         <p class="project-desc">{{ . }}</p>
       {{- end }}
