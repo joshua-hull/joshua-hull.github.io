@@ -14,9 +14,12 @@
 {{- template "_internal/twitter_cards.html" . -}}
 <link rel="canonical" href="{{ .Permalink }}">
 
-{{/* Set the theme before first paint so a stored preference never flashes. */}}
+{{/* Runs before first paint: applies any stored theme so it never flashes, and
+     marks the document so CSS can reveal the toggle. The toggle is useless
+     without JS, so it stays hidden until this has run. */}}
 <script>
   (function () {
+    document.documentElement.classList.add("js");
     try {
       var t = localStorage.getItem("theme");
       if (t === "light" || t === "dark") {
