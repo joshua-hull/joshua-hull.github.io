@@ -1,4 +1,4 @@
-// Colour-scheme toggle. jh.css already ships both palettes, keyed on
+// Color-scheme toggle. jh.css already ships both palettes, keyed on
 // prefers-color-scheme with a [data-theme] escape hatch, so this only has to
 // set that attribute. head.html applies any stored value before first paint.
 (function () {

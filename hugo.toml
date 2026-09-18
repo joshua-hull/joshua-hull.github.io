@@ -25,7 +25,7 @@ pagerSize = 6
 [params]
 author = "Joshua Hull"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
-description = "Joshua Hull's Personal Website"
+description = "Senior software engineer in the Upstate of South Carolina. Notes on the things I build."
 keywords = "Joshua Hull, software engineer, full stack developer, C#, Blazor, .NET, React, Python, Kubernetes, South Carolina"
 # Social preview card (1200x630). Hugo's internal opengraph/twitter_cards
 # templates fall back to this when a page sets no image of its own.
