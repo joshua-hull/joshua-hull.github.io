@@ -14,7 +14,7 @@ education:
 
 skills:
   - label: Languages
-    items: [C#, Java, JavaScript, Python, SQL]
+    items: [C#, Java, JavaScript, TypeScript, Python, SQL]
   - label: Frameworks
     items: [Blazor, .NET, React, Redux, Spring Boot, Node.js]
   - label: Cloud & infrastructure
